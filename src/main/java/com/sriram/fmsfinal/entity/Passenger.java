@@ -1,6 +1,7 @@
 package com.sriram.fmsfinal.entity;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
 
 @Entity
 public class Passenger {
@@ -20,6 +21,7 @@ public class Passenger {
     private String email;
 
     @ManyToOne
-    @JoinColumn(name = "flight_code")
+    @JoinColumn(name = "flight_id")
+    @NotNull
     private Flight flight;
 }
